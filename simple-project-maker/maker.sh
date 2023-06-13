@@ -67,10 +67,22 @@ w
 q" > /tmp/index-html.ed
 
 # connect to virtual enviroment.
-source ./env/bin/activate
+venv=$( ls -a )
+for i in $venv;
+do
+    
+    if [[ "env/" != *"$i"* ]];
+    then 
+        $( python3 -m venv env )
+        source ./env/bin/activate
+    else
+        source ./env/bin/activate
+    fi
+
+done
 
 # install requirements.
-pip install -r requirements.txt
+pip install django
 
 # make the peoject.
 django-admin startproject core 
@@ -107,5 +119,12 @@ touch layout.html index.html
 ed ./layout.html < /tmp/layout-html.ed
 ed ./index.html < /tmp/index-html.ed
 
-# rm '.ed' files
+# rm '.ed' files (Clean UP)
 rm -rf /tmp/*.ed
+
+# Colors.
+BGreen='\033[1;32m' # source: https://stackoverflow.com/a/28938235
+NC='\033[0m' 
+
+# last message
+printf "\nthe Project 'core' ${BGreen}successfully${NC} Created.\n";
