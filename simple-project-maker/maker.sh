@@ -82,7 +82,7 @@ do
 done
 
 # install requirements.
-pip install django
+pip install -r requirements.txt
 
 # make the peoject.
 django-admin startproject core 
