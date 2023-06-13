@@ -1,3 +1,8 @@
+# for testing
+.DS_Store
+*.ed
+requirements.txt
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
