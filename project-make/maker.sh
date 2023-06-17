@@ -66,6 +66,12 @@ echo "0i
 w
 q" > /tmp/index-html.ed
 
+# Make a requirements file
+# TODO: make requirements file if not exists.
+echo "asgiref
+Django
+sqlparse" > requirements.txt
+
 # connect to virtual enviroment.
 venv=$( ls -a )
 for i in $venv;
