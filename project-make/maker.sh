@@ -67,10 +67,10 @@ w
 q" > /tmp/index-html.ed
 
 # Make a requirements file
-# TODO: make requirements file if not exists.
+
 echo "asgiref
 Django
-sqlparse" > requirements.txt
+sqlparse" > /tmp/requirements.txt    
 
 # connect to virtual enviroment.
 venv=$( ls -a )
@@ -88,7 +88,8 @@ do
 done
 
 # install requirements.
-pip install -r requirements.txt
+pip install -r /tmp/requirements.txt
+rm -rf tmp/requirements.txt
 
 # make the peoject.
 django-admin startproject core 
