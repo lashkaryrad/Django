@@ -1,5 +1,6 @@
 """
 ASGI config for core project.
+Stands For: Asynchronouns Server Gateway Interface
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
