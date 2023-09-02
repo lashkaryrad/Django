@@ -1,5 +1,6 @@
 """
 WSGI config for core project.
+WSGI stands for Web Server Gateway Interface
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
